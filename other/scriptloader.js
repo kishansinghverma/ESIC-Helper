@@ -3,7 +3,7 @@
 // @version      1.0
 // @description  Helper Script to Autofill ESIC
 // @author       You
-// @match        https://portal.esic.gov.in/ESICInsurance1/*
+// @match        https://portal.esic.gov.in/*
 // @grant        none
 // @run-at       document-start
 
