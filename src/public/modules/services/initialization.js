@@ -48,7 +48,7 @@ export const executeScript = async () => {
 
     const urlSegments = window.location.href.split('/');
     if (urlSegments.some(segment => segment.includes('EmployeeCounterFoilRegistration'))) {
-        alert('Running...');
+        alert('Running....');
     }
 
     // const route = urlSegments.pop().split('?')[0];
