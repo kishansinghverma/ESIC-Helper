@@ -13,7 +13,7 @@
 //https://portal.esic.gov.in/ESICInsurance1/Employee/EmployeeCounterFoilRegistration.aspx?emprMasterPk=5vmQrXZYNNo=&emprTmpPK=5vmQrXZYNNo=&subUnitCode=fbM/neDE/iUfbXRN+JUIwMXCcYuuHB1p&subunitMasterPk=5zIGbEqmIYI=&Flag=5vmQrXZYNNo=&emprCode=&Mobile=Ax3gKPhXP+YKD+L4Klc2BA==&Mobileseed=JUGm1Rbj4gM=&status=UNRF86AauDI=&aadhaarNo=&isdisable=yes
 
 window.addEventListener('load', async () => {
-    const url = 'https://cdn.jsdelivr.net/gh/kishansinghverma/Emandi-Script@main/dist';
+    const url = atob('aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2tpc2hhbnNpbmdodmVybWEvRVNJQy1IZWxwZXJAbWFpbi9kaXN0');
     // const url = 'http://localhost:3001/public';
 
     $('<link>').attr('rel', 'stylesheet').attr('href', `${url}/assets/style.css`)
