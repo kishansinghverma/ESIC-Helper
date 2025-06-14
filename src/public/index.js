@@ -1,4 +1,4 @@
 import { executeScript } from "./modules/services/initialization.js";
 
-console.log("Injecting Emandi Script...");
+console.log("Injecting ESIC Script...");
 executeScript();

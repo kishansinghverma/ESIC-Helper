@@ -48,7 +48,13 @@ export const executeScript = async () => {
 
     const urlSegments = window.location.href.split('/');
     if (urlSegments.some(segment => segment.includes('EmployeeCounterFoilRegistration'))) {
-        alert('Running...');
+        const userId = document.getElementById('ctl00_lbluserName');
+        userId.style = 'color: darkgreen; font-weight: bold; cursor: pointer;';
+        userId.addEventListener('click', () => {
+            console.log('User ID clicked!');
+        });
+        
+        console.log('Script injected!');
     }
 
     // const route = urlSegments.pop().split('?')[0];
