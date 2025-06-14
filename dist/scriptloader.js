@@ -11,12 +11,19 @@
 
 //https://portal.esic.gov.in/ESICInsurance1/ESICInsurancePortal/PortalHome.aspx?UserName=fbM/neDE/iUfbXRN+JUIwMXCcYuuHB1p&lupk=9gICyV9R1kCE1fPgkk1Bsg==&to=&ipaddress=TSjFwkfJoVxTZDLvjvyp8Q==
 //https://portal.esic.gov.in/ESICInsurance1/Employee/EmployeeCounterFoilRegistration.aspx?emprMasterPk=5vmQrXZYNNo=&emprTmpPK=5vmQrXZYNNo=&subUnitCode=fbM/neDE/iUfbXRN+JUIwMXCcYuuHB1p&subunitMasterPk=5zIGbEqmIYI=&Flag=5vmQrXZYNNo=&emprCode=&Mobile=Ax3gKPhXP+YKD+L4Klc2BA==&Mobileseed=JUGm1Rbj4gM=&status=UNRF86AauDI=&aadhaarNo=&isdisable=yes
+//https://portal.esic.gov.in/InsuranceGlobalWebV4/ESICInsurancePortal/
 
 window.addEventListener('load', async () => {
-    const url = atob('aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2tpc2hhbnNpbmdodmVybWEvRVNJQy1IZWxwZXJAbWFpbi9kaXN0');
-    // const url = 'http://localhost:3001/public';
+    //const url = atob('aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2tpc2hhbnNpbmdodmVybWEvRVNJQy1IZWxwZXJAbWFpbi9kaXN0');
+    const url = 'http://localhost:3001/public';
 
-    $('<link>').attr('rel', 'stylesheet').attr('href', `${url}/assets/style.css`)
-        .on('load', async () => { await import(`${url}/index.js`) })
-        .appendTo(document.head);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${url}/assets/style.css`;
+
+    link.onload = async () => {
+        await import(`${url}/index.js`);
+    };
+
+    document.head.appendChild(link);
 });
