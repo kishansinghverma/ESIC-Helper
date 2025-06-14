@@ -1,0 +1,39 @@
+name: Build and Commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Commit changes
+        run: |
+          git config --global user.name "Gitflow Agent"
+          git config --global user.email "kishansinghverma@gmail.com"
+          git add .
+          git commit -m "Build @ $(TZ='Asia/Kolkata' date +'%Y-%m-%d %H:%M:%S')"
+          git push
+      
+      - name: Purge jsDelivr Cache
+        run: |
+          curl -X GET "https://purge.jsdelivr.net/gh/kishansinghverma/Emandi-Script@main/dist/scriptloader.js"
+          curl -X GET "https://purge.jsdelivr.net/gh/kishansinghverma/Emandi-Script@main/dist/index.js"
+          curl -X GET "https://purge.jsdelivr.net/gh/kishansinghverma/Emandi-Script@main/dist/assets/style.css"
