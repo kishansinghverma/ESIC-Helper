@@ -13,8 +13,9 @@
 //https://portal.esic.gov.in/ESICInsurance1/Employee/EmployeeCounterFoilRegistration.aspx?emprMasterPk=5vmQrXZYNNo=&emprTmpPK=5vmQrXZYNNo=&subUnitCode=fbM/neDE/iUfbXRN+JUIwMXCcYuuHB1p&subunitMasterPk=5zIGbEqmIYI=&Flag=5vmQrXZYNNo=&emprCode=&Mobile=Ax3gKPhXP+YKD+L4Klc2BA==&Mobileseed=JUGm1Rbj4gM=&status=UNRF86AauDI=&aadhaarNo=&isdisable=yes
 //https://portal.esic.gov.in/InsuranceGlobalWebV4/ESICInsurancePortal/
 
-window.addEventListener('load', async () => {
-    //const url = atob('aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2tpc2hhbnNpbmdodmVybWEvRVNJQy1IZWxwZXJAbWFpbi9kaXN0');
+(function () {
+    'use strict';
+
     const url = 'http://localhost:3001/public';
 
     const link = document.createElement('link');
@@ -26,4 +27,4 @@ window.addEventListener('load', async () => {
     };
 
     document.head.appendChild(link);
-});
+})();
