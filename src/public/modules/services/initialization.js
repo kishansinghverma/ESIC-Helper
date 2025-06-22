@@ -128,6 +128,8 @@ const parseFile = (file) => {
 
         window.parsedData = targetRecords;
 
+        console.log("Working...")
+
         const columnsToRender = targetRecords.map(record => ({
             Id: record.Id,
             Name: record['FULL NAME'],
